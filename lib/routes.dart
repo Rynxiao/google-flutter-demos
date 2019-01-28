@@ -13,6 +13,7 @@ import './src/font.dart';
 import './src/gradient.dart';
 import './src/snack_bar.dart';
 import './src/gridview.dart';
+import './src/dropdown.dart';
 
 Map<String, WidgetBuilder> getRoutes() {
   return <String, WidgetBuilder>{
@@ -32,6 +33,7 @@ Map<String, WidgetBuilder> getRoutes() {
     TextInputWidget.routeName: (BuildContext context) => TextInputWidget(),
     SnackBarPage.routeName: (BuildContext context) => SnackBarPage(),
     GridViewPage.routeName: (BuildContext context) => GridViewPage(),
+    DropDownPage.routeName: (BuildContext context) => DropDownPage(),
   };
 }
 
@@ -50,6 +52,7 @@ Map<String, String> getRoutesName() {
     GradientWidget.routeName: 'Gradient',
     TextInputWidget.routeName: 'Text Input',
     SnackBarPage.routeName: 'SnackBar',
-    GridViewPage.routeName: 'GridView'
+    GridViewPage.routeName: 'GridView',
+    DropDownPage.routeName: 'DropDown List',
   };
 }
