@@ -14,6 +14,7 @@ import './src/gradient.dart';
 import './src/snack_bar.dart';
 import './src/gridview.dart';
 import './src/dropdown.dart';
+import './src/network_image.dart';
 
 Map<String, WidgetBuilder> getRoutes() {
   return <String, WidgetBuilder>{
@@ -34,6 +35,7 @@ Map<String, WidgetBuilder> getRoutes() {
     SnackBarPage.routeName: (BuildContext context) => SnackBarPage(),
     GridViewPage.routeName: (BuildContext context) => GridViewPage(),
     DropDownPage.routeName: (BuildContext context) => DropDownPage(),
+    NetworkImagePage.routeName: (BuildContext context) => NetworkImagePage(),
   };
 }
 
@@ -54,5 +56,6 @@ Map<String, String> getRoutesName() {
     SnackBarPage.routeName: 'SnackBar',
     GridViewPage.routeName: 'GridView',
     DropDownPage.routeName: 'DropDown List',
+    NetworkImagePage.routeName: 'Network Image',
   };
 }
