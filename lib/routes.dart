@@ -11,6 +11,8 @@ import './src/tabs.dart';
 import './src/bottom_navigation_tab.dart';
 import './src/font.dart';
 import './src/gradient.dart';
+import './src/snack_bar.dart';
+import './src/gridview.dart';
 
 Map<String, WidgetBuilder> getRoutes() {
   return <String, WidgetBuilder>{
@@ -28,6 +30,8 @@ Map<String, WidgetBuilder> getRoutes() {
     FontWidget.routeName: (BuildContext context) => FontWidget(),
     GradientWidget.routeName: (BuildContext context) => GradientWidget(),
     TextInputWidget.routeName: (BuildContext context) => TextInputWidget(),
+    SnackBarPage.routeName: (BuildContext context) => SnackBarPage(),
+    GridViewPage.routeName: (BuildContext context) => GridViewPage(),
   };
 }
 
@@ -45,5 +49,7 @@ Map<String, String> getRoutesName() {
     FontWidget.routeName: 'Font',
     GradientWidget.routeName: 'Gradient',
     TextInputWidget.routeName: 'Text Input',
+    SnackBarPage.routeName: 'SnackBar',
+    GridViewPage.routeName: 'GridView'
   };
 }

@@ -41,6 +41,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - data/images/2.jpeg
+    - data/images/ic_launcher.png
     - data/json/data.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -55,9 +56,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-     - family: Pacifico
-       fonts:
-         - asset: data/fonts/Pacifico-Regular.ttf
+    - family: Pacifico
+      fonts:
+        - asset: data/fonts/Pacifico-Regular.ttf
 #           style: italic
   #   - family: Trajan Pro
   #     fonts:
