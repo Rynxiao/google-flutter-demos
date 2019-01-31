@@ -15,6 +15,7 @@ import './src/snack_bar.dart';
 import './src/gridview.dart';
 import './src/dropdown.dart';
 import './src/network_image.dart';
+import './src/persist_key_value.dart';
 
 Map<String, WidgetBuilder> getRoutes() {
   return <String, WidgetBuilder>{
@@ -35,6 +36,7 @@ Map<String, WidgetBuilder> getRoutes() {
     SnackBarPage.routeName: (BuildContext context) => SnackBarPage(),
     GridViewPage.routeName: (BuildContext context) => GridViewPage(),
     DropDownPage.routeName: (BuildContext context) => DropDownPage(),
+    PersistKeyValuePage.routeName: (BuildContext context) => PersistKeyValuePage(),
     NetworkImagePage.routeName: (BuildContext context) => NetworkImagePage(),
   };
 }
@@ -56,6 +58,7 @@ Map<String, String> getRoutesName() {
     SnackBarPage.routeName: 'SnackBar',
     GridViewPage.routeName: 'GridView',
     DropDownPage.routeName: 'DropDown List',
+    PersistKeyValuePage.routeName: 'Persist Key Value',
     NetworkImagePage.routeName: 'Network Image',
   };
 }
