@@ -16,6 +16,7 @@ import './src/gridview.dart';
 import './src/dropdown.dart';
 import './src/network_image.dart';
 import './src/persist_key_value.dart';
+import './src/photos_stream.dart';
 
 Map<String, WidgetBuilder> getRoutes() {
   return <String, WidgetBuilder>{
@@ -38,6 +39,7 @@ Map<String, WidgetBuilder> getRoutes() {
     DropDownPage.routeName: (BuildContext context) => DropDownPage(),
     PersistKeyValuePage.routeName: (BuildContext context) => PersistKeyValuePage(),
     NetworkImagePage.routeName: (BuildContext context) => NetworkImagePage(),
+    DynamicPhotosStreamPage.routeName: (BuildContext context) => DynamicPhotosStreamPage(),
   };
 }
 
@@ -60,5 +62,6 @@ Map<String, String> getRoutesName() {
     DropDownPage.routeName: 'DropDown List',
     PersistKeyValuePage.routeName: 'Persist Key Value',
     NetworkImagePage.routeName: 'Network Image',
+    DynamicPhotosStreamPage.routeName: 'Dynamic Photo Stream'
   };
 }

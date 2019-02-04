@@ -17,7 +17,15 @@ class _LogoFadeState extends State<LogoFade> with TickerProviderStateMixin {
     final CurvedAnimation curve =
         CurvedAnimation(parent: controller, curve: Curves.easeIn);
     animation = Tween(begin: 0.0, end: 1.0).animate(curve);
+    animation.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        controller.reverse();
+      } else if (status == AnimationStatus.dismissed) {
+        controller.forward();
+      }
+    });
     controller.forward();
+//    controller.repeat();
   }
 
   @override
