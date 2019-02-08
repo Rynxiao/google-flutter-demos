@@ -17,6 +17,8 @@ import './src/dropdown.dart';
 import './src/network_image.dart';
 import './src/persist_key_value.dart';
 import './src/photos_stream.dart';
+import './src/advanced_physics_animation.dart';
+import './src/draggable.dart';
 
 Map<String, WidgetBuilder> getRoutes() {
   return <String, WidgetBuilder>{
@@ -40,6 +42,8 @@ Map<String, WidgetBuilder> getRoutes() {
     PersistKeyValuePage.routeName: (BuildContext context) => PersistKeyValuePage(),
     NetworkImagePage.routeName: (BuildContext context) => NetworkImagePage(),
     DynamicPhotosStreamPage.routeName: (BuildContext context) => DynamicPhotosStreamPage(),
+    AdvancedPhysicsAnimationsPage.routeName: (BuildContext context) => AdvancedPhysicsAnimationsPage(),
+    DraggablePage.routeName: (BuildContext context) => DraggablePage(),
   };
 }
 
@@ -62,6 +66,8 @@ Map<String, String> getRoutesName() {
     DropDownPage.routeName: 'DropDown List',
     PersistKeyValuePage.routeName: 'Persist Key Value',
     NetworkImagePage.routeName: 'Network Image',
-    DynamicPhotosStreamPage.routeName: 'Dynamic Photo Stream'
+    DynamicPhotosStreamPage.routeName: 'Dynamic Photo Stream',
+    AdvancedPhysicsAnimationsPage.routeName: 'Advanced Physics Animations',
+    DraggablePage.routeName: 'Draggable',
   };
 }
