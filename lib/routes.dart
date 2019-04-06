@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/src/sqlite/index.dart';
 import 'package:flutter/material.dart';
 import './src/random_words.dart';
 import './src/gesture.dart';
@@ -22,12 +23,12 @@ import './src/draggable.dart';
 
 Map<String, WidgetBuilder> getRoutes() {
   return <String, WidgetBuilder>{
+    SqliteWidget.routeName: (BuildContext context) => SqliteWidget(),
     RandomWords.routeName: (BuildContext context) => RandomWords(),
     GestureWidget.routeName: (BuildContext context) => GestureWidget(),
     PlatformWidget.routeName: (BuildContext context) => PlatformWidget(),
     LogoFade.routeName: (BuildContext context) => LogoFade(),
-    LocalImageWidget.routeName: (BuildContext context) =>
-        LocalImageWidget(),
+    LocalImageWidget.routeName: (BuildContext context) => LocalImageWidget(),
     LocalJsonWidget.routeName: (BuildContext context) => LocalJsonWidget(),
     StepperWidget.routeName: (BuildContext context) => StepperWidget(),
     TabsWidget.routeName: (BuildContext context) => TabsWidget(),
@@ -39,16 +40,20 @@ Map<String, WidgetBuilder> getRoutes() {
     SnackBarPage.routeName: (BuildContext context) => SnackBarPage(),
     GridViewPage.routeName: (BuildContext context) => GridViewPage(),
     DropDownPage.routeName: (BuildContext context) => DropDownPage(),
-    PersistKeyValuePage.routeName: (BuildContext context) => PersistKeyValuePage(),
+    PersistKeyValuePage.routeName: (BuildContext context) =>
+        PersistKeyValuePage(),
     NetworkImagePage.routeName: (BuildContext context) => NetworkImagePage(),
-    DynamicPhotosStreamPage.routeName: (BuildContext context) => DynamicPhotosStreamPage(),
-    AdvancedPhysicsAnimationsPage.routeName: (BuildContext context) => AdvancedPhysicsAnimationsPage(),
+    DynamicPhotosStreamPage.routeName: (BuildContext context) =>
+        DynamicPhotosStreamPage(),
+    AdvancedPhysicsAnimationsPage.routeName: (BuildContext context) =>
+        AdvancedPhysicsAnimationsPage(),
     DraggablePage.routeName: (BuildContext context) => DraggablePage(),
   };
 }
 
 Map<String, String> getRoutesName() {
   return <String, String>{
+    SqliteWidget.routeName: 'Sqlite',
     RandomWords.routeName: 'Random Words',
     GestureWidget.routeName: 'Gesture',
     PlatformWidget.routeName: 'Platform',
