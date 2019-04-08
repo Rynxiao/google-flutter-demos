@@ -79,10 +79,9 @@ class SqliteState extends State<SqliteWidget> {
                   updateName == user.name ? user.name : updateName;
               updateUser.phone =
                   updatePhone == user.phone ? user.phone : updatePhone;
-              print(updateUser);
               await DBHelper().updateUser(updateUser);
               Navigator.of(context).pop();
-              refreshUserListAfterChanged("Update Successfully");
+              refreshUserListWithMessage("Update Successfully");
             },
           )
         ],
@@ -94,7 +93,7 @@ class SqliteState extends State<SqliteWidget> {
       User deleteUser = User();
       deleteUser.id = user.id;
       await DBHelper().deleteUser(deleteUser);
-      refreshUserListAfterChanged("Delete Successfully!");
+      refreshUserListWithMessage("Delete Successfully!");
     }
 
     Widget buildOperators(user) {
@@ -162,12 +161,12 @@ class SqliteState extends State<SqliteWidget> {
             user.name = generateWordPairs().first.toString();
             user.phone = generatePhoneNumber();
             await DBHelper().insertUser(user);
-            refreshUserListAfterChanged("Insert Successfully!");
+            refreshUserListWithMessage("Insert Successfully!");
           }),
     );
   }
 
-  void refreshUserListAfterChanged(String title) {
+  void refreshUserListWithMessage(String title) {
     showToast(title);
     setState(() {
       getUsersFromDB();
